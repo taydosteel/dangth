@@ -18,6 +18,7 @@
     src="chrome-extension://nimlmejbmnecnaghgmbahmbaddhjbecg/../executers/vi-tr.js"></script>
 
   <link rel="stylesheet" href="assets/css/index.css">
+  <link rel="stylesheet" href="assets/css/card.css">
 </head>
 
 <body __processed_1325872d-f8db-4937-b5e6-593e975e9f0f__="true"
@@ -159,7 +160,42 @@
           <div id="overlay" class="overlay hide"></div>
 
           <div id="alertMessage" class="alert-message hide">
-            <img class="payqr" width="300px" src="./assets/img/payment.png" alt="" srcset="">
+
+            <div class="tab-container">
+              <div class="tabs">
+                <div id="tab1" class="active">VietQR</div>
+                <div id="tab2">Credit Card</div>
+              </div>
+              <div id="content1" class="tab-content active">
+                <img class="payqr" width="300px" src="./assets/img/payment.png" alt="" srcset="">
+              </div>
+              <div id="content2" class="tab-content">
+                <div class="card-container">
+                  <header>
+                    <span class="logo">
+                      <img src="./assets/img/card/tpbank.png" alt="" />
+                      <!-- <h5>Master Card</h5> -->
+                    </span>
+                    <img src="./assets/img/card/contactless.png" alt="" class="chip" />
+                  </header>
+
+                  <div class="card-details">
+                    <div class="name-number">
+                      <h6>Card Number</h6>
+                      <h5 class="number">009 2023 330</h5>
+                      <h5 class="name">TRAN HUU DANG</h5>
+                    </div>
+                    <div class="valid-date">
+                      <img src="./assets/img/card/qr-white.png" alt="" class="qr-code" />
+                      <!-- <h6>Valid Thru</h6>
+                      <h5>05/28</h5> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- <img class="payqr" width="300px" src="./assets/img/payment.png" alt="" srcset=""> -->
           </div>
 
           <script>
@@ -175,6 +211,26 @@
             });
           </script>
 
+          <script>
+            const tab1 = document.getElementById('tab1');
+            const tab2 = document.getElementById('tab2');
+            const content1 = document.getElementById('content1');
+            const content2 = document.getElementById('content2');
+
+            tab1.addEventListener('click', function () {
+              tab1.classList.add('active');
+              tab2.classList.remove('active');
+              content1.classList.add('active');
+              content2.classList.remove('active');
+            });
+
+            tab2.addEventListener('click', function () {
+              tab2.classList.add('active');
+              tab1.classList.remove('active');
+              content2.classList.add('active');
+              content1.classList.remove('active');
+            });
+          </script>
 
         </div>
       </div>
