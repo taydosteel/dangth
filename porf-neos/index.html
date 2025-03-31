@@ -81,6 +81,16 @@
       margin-right: 8px;
       z-index: 10;
     }
+
+    .items {
+      display: flex;
+      gap: 12px;
+    }
+
+    .bottom-nav {
+      display: inline-flex;
+      gap: 24px;
+    }
   </style>
 </head>
 
@@ -88,12 +98,28 @@
 
   <div class="bottom-nav-wrapper">
     <div class="bottom-nav" id="bottomNav">
-      <div class="nav-item"><a href="#"><i class="fas fa-home"></i></a></div>
-      <div class="nav-item"><a href="#"><i class="fas fa-user"></i></a></div>
-      <div class="nav-item"><a href="#"><i class="fas fa-briefcase"></i></a></div>
-      <div class="nav-item"><a href="#"><i class="fas fa-envelope"></i></a></div>
+
+      <!-- 👤 Cá nhân -->
+      <div class="items">
+        <div class="nav-item"><a href="#"><i class="fas fa-home"></i></a></div>
+        <div class="nav-item"><a href="#"><i class="fas fa-user"></i></a></div>
+        <div class="nav-item"><a href="#"><i class="fas fa-briefcase"></i></a></div>
+        <div class="nav-item"><a href="#"><i class="fas fa-envelope"></i></a></div>
+      </div>
+
+      <!-- 🌐 Social Dev -->
+      <div class="items">
+        <div class="nav-item"><a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a></div>
+        <div class="nav-item"><a href="https://gitlab.com/" target="_blank"><i class="fab fa-gitlab"></i></a></div>
+        <div class="nav-item"><a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <div class="nav-item"><a href="https://stackoverflow.com/" target="_blank"><i
+              class="fab fa-stack-overflow"></i></a></div>
+      </div>
+
     </div>
   </div>
+
 
   <script>
     const nav = document.getElementById("bottomNav");
