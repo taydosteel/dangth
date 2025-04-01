@@ -4,120 +4,131 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bottom Nav Scale</title>
+  <title>Tran Huu Dang</title>
+
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <style>
-    body {
-      margin: 0;
-      font-family: sans-serif;
-      background: #f8f8f8;
-    }
-
-    .bottom-nav-wrapper {
-      position: fixed;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      max-width: 90%;
-      padding: 0 12px;
-      z-index: 9999;
-      overflow: visible !important;
-      /* ✅ Cho phép icon phình ra ngoài */
-    }
-
-    .bottom-nav {
-      display: inline-flex;
-      gap: 12px;
-      background: #fff;
-      padding: 10px 16px;
-      border-radius: 16px;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-      border: solid 0.5px rgb(228, 228, 228);
-      justify-content: center;
-      transition: padding 0.2s ease;
-      overflow: visible !important;
-      /* ✅ Quan trọng để scale vượt khung */
-    }
-
-    .bottom-nav-wrapper::-webkit-scrollbar {
-      display: none;
-    }
-
-    .bottom-nav-wrapper {
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-    }
-
-    .nav-item {
-      flex: 0 0 auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: visible;
-    }
-
-    .nav-item a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 46px;
-      height: 46px;
-      border-radius: 11px;
-      font-size: 15px;
-      background: #f5f5f5;
-      color: #9a9a9a;
-      text-decoration: none;
-      transition: transform 0.2s ease, margin 0.2s ease;
-      position: relative;
-      z-index: 1;
-    }
-
-    .nav-item a.hovered {
-      transform: scale(1.5);
-      margin-top: -18px;
-      background: #eaeaea;
-      /* color: #404040; */
-      margin-left: 8px;
-      margin-right: 8px;
-      z-index: 10;
-    }
-
-    .items {
-      display: flex;
-      gap: 12px;
-    }
-
-    .bottom-nav {
-      display: inline-flex;
-      gap: 24px;
-    }
-  </style>
+  <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 
 <body>
 
-  <div class="bottom-nav-wrapper">
-    <div class="bottom-nav" id="bottomNav">
+  <div class="menu">
+    <div class="bottom-nav-wrapper">
+      <div class="bottom-nav" id="bottomNav">
 
-      <!-- 👤 Cá nhân -->
-      <div class="items">
+        <!-- 👤 Cá nhân -->
         <div class="nav-item"><a href="#"><i class="fas fa-home"></i></a></div>
         <div class="nav-item"><a href="#"><i class="fas fa-user"></i></a></div>
         <div class="nav-item"><a href="#"><i class="fas fa-briefcase"></i></a></div>
         <div class="nav-item"><a href="#"><i class="fas fa-envelope"></i></a></div>
-      </div>
-
-      <!-- 🌐 Social Dev -->
-      <div class="items">
+        <div class="ae ao dt du dc "></div>
+        <!-- 🌐 Social Dev -->
         <div class="nav-item"><a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a></div>
         <div class="nav-item"><a href="https://gitlab.com/" target="_blank"><i class="fab fa-gitlab"></i></a></div>
         <div class="nav-item"><a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
         </div>
-        <div class="nav-item"><a href="https://stackoverflow.com/" target="_blank"><i
-              class="fab fa-stack-overflow"></i></a></div>
+        <div class="nav-item">
+          <a href="https://stackoverflow.com/" target="_blank"> <i class="fab fa-stack-overflow"></i></a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="head item">
+      <div class="left">
+        <div class="bounce_auto">
+          <img src="avt.png" id="avt" alt="" class="bounce">
+        </div>
+        <h1 id="uname">Tran Huu Dang <span id="subname"></span></h1>
+        <p id="desc">Java Developer</p>
+        <div class="contact">
+          <div class="wrap">
+            <a href="https://github.com/dangtranhuu/RESUME/blob/main/CV%20Tran%20Huu%20Dang%20-%20TranHuuDang-InternDeveloper.pdf"
+              target="_blank"><button>My Resume</button></a>
+            <!-- <button><i class='bx bx-envelope'></i></button> -->
+            <a target="_blank" href="https://github.com/theanishtar"><button><i id="github"
+                  class='bx bxl-github'></i></button></a>
+
+            <!-- <button><i class='bx bxl-twitter'></i></button> -->
+            <!-- <a href="https://www.youtube.com/@froggydev" target="_blank"><button>
+                <img src="images/leetcode-logo.svg" alt="" srcset="">
+              </button></a> -->
+            <a href="https://leetcode.com/tranhuudang" target="_blank">
+              <button>
+                <svg id="leetcode" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                  </g>
+                  <g id="SVGRepo_iconCarrier">
+                    <title>LeetCode icon</title>
+                    <path
+                      d="M16.102 17.93l-2.697 2.607c-.466.467-1.111.662-1.823.662s-1.357-.195-1.824-.662l-4.332-4.363c-.467-.467-.702-1.15-.702-1.863s.235-1.357.702-1.824l4.319-4.38c.467-.467 1.125-.645 1.837-.645s1.357.195 1.823.662l2.697 2.606c.514.515 1.365.497 1.9-.038.535-.536.553-1.387.039-1.901l-2.609-2.636a5.055 5.055 0 0 0-2.445-1.337l2.467-2.503c.516-.514.498-1.366-.037-1.901-.535-.535-1.387-.552-1.902-.038l-10.1 10.101c-.981.982-1.494 2.337-1.494 3.835 0 1.498.513 2.895 1.494 3.875l4.347 4.361c.981.979 2.337 1.452 3.834 1.452s2.853-.512 3.835-1.494l2.609-2.637c.514-.514.496-1.365-.039-1.9s-1.386-.553-1.899-.039zM20.811 13.01H10.666c-.702 0-1.27.604-1.27 1.346s.568 1.346 1.27 1.346h10.145c.701 0 1.27-.604 1.27-1.346s-.569-1.346-1.27-1.346z">
+                    </path>
+                  </g>
+                </svg>
+              </button>
+            </a>
+
+            <a href="https://www.hackerrank.com/tranhuudang" target="_blank">
+              <button>
+                <svg id="hackerrank" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                  </g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M16 0c1.714 0 13 6.516 13.854 8 0.859 1.484 0.859 14.516 0 16s-12.141 8-13.854 8c-1.714 0-13-6.516-13.859-8-0.854-1.484-0.854-14.516 0-16 0.859-1.484 12.146-8 13.859-8zM19.063 9.068c-0.193 0-0.349 0.151-0.349 0.344v5.167h-5.427v-5.37h0.932c0.188 0 0.339-0.151 0.339-0.344 0-0.125-0.068-0.234-0.161-0.292l-2.099-2.010c-0.063-0.089-0.188-0.146-0.302-0.146-0.109 0-0.214 0.057-0.276 0.141l-2.24 2.016c-0.094 0.063-0.161 0.167-0.161 0.292 0 0.188 0.151 0.344 0.344 0.344h0.938l0.010 13.38c0 0.193 0.146 0.344 0.339 0.344h1.99c0.188 0 0.344-0.151 0.344-0.344v-5.339h5.432v5.536h-0.932c-0.193 0-0.344 0.156-0.344 0.344 0 0.125 0.068 0.234 0.161 0.292l2.104 2.016c0.057 0.083 0.188 0.146 0.302 0.146s0.208-0.063 0.276-0.146l2.24-2.016c0.094-0.057 0.161-0.167 0.161-0.292 0-0.188-0.156-0.344-0.344-0.344h-0.938l-0.010-13.375c0-0.198-0.151-0.349-0.339-0.349h-1.99z">
+                    </path>
+                  </g>
+                </svg>
+              </button>
+            </a>
+          </div>
+          <div class="wrap">
+            <a target="_blank" href="https://www.linkedin.com/in/tranhuudang"><button><i class='bx bxl-linkedin-square'
+                  id="linkedin"></i></button></a>
+            <a href="https://www.youtube.com/@froggydev" target="_blank"><button><i class='bx bxl-youtube'
+                  id="youtube"></i></button></a>
+            <a target="_blank" href="https://www.facebook.com/dangdeveloper/"><button><i class='bx bxl-facebook-square'
+                  id="facebook"></i></button></a>
+            <a href="https://www.tiktok.com/@theanishtar" target="_blank" rel="noopener noreferrer"><button><i
+                  class='bx bxl-tiktok' id="tiktok"></i>
+              </button></a>
+            <a href="https://www.tiktok.com/@theanishtar" target="_blank" rel="noopener noreferrer"><button><i
+                  class='bx bxl-twitter' id="twitter"></i>
+              </button></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="right bounce_auto">
+        <img id="avatar" src="avt.png" alt="" class="bounce">
       </div>
 
     </div>
+    <div class="about item">
+      <p>Hi, i'm Tran Huu Dang. You can call me Davis.</p>
+      <p>I like technology and other work with computer. I am a developer in the back-end website fields
+        (NodeJS and Spring Boot)
+      </p>
+      <p>In addition, I also have knowledge of technology such as Angular, VueJS,
+        TaiwindCSS, JavaSwing. I understand tools like Git, Postman, Debug, ...</p>
+      <p style="padding-right: 30px;">Connect with my Linkedin to discuss about work or my Github to share
+        interesting knowledge ^^</p>
+    </div>
+
+    <footer>
+      © Davis 2023 · A FrogDev at @FrogSageLand
+    </footer>
   </div>
 
 
