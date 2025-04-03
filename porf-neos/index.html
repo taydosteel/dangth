@@ -15,6 +15,10 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="./assets/css/styles.css">
+  <link rel="stylesheet" href="./assets/css/animation.css">
+
+  <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/mode.js"></script>
 </head>
 
 <body>
@@ -46,7 +50,7 @@
     <div class="head item">
       <div class="left">
         <div class="bounce_auto">
-          <img src="avt.png" id="avt" alt="" class="bounce">
+          <img src="./assets/images/avt.png" id="avt" alt="" class="bounce">
         </div>
         <h1 id="uname">Tran Huu Dang <span id="subname"></span></h1>
         <p id="desc">Java Developer</p>
@@ -99,7 +103,7 @@
       </div>
 
       <div class="right bounce_auto">
-        <img id="avatar" src="avt.png" alt="" class="bounce">
+        <img id="avatar" src="./assets/images/avt.png" alt="" class="bounce">
       </div>
 
     </div>
@@ -116,83 +120,118 @@
 
     <div class="experience title">
       <h1>Experience</h1>
-      <div class="row">
-        <div class="left col">
-          <div class="left">
-            <img class="logo" src="./assets/images/image.jpg" alt="" srcset="">
+      <div class="item">
+        <div class="title">
+          <div class="left col">
+            <div class="left">
+              <img class="logo" src="./assets/images/exp/fpoly.jpg">
+            </div>
+            <div class="right">
+              <div class="top">
+                Davlands
+                <span class="icon-wrap">
+                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                    class="text-black inline transform transition-transform duration-200" height="18" width="18"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill="none" d="M0 0h24v24H0V0z"></path>
+                    <path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"></path>
+                  </svg>
+                </span>
+
+              </div>
+              <div class="bot">
+                Fullstack developer
+              </div>
+            </div>
           </div>
           <div class="right">
-            <div class="top">
-              Factory software FPL Can Tho
-            </div>
-            <div class="bot">
-              Leader Developer team
-            </div>
+            2021–2023
           </div>
         </div>
-        <div class="right">
-          2021–2023
+        <div class="details">
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga labore obcaecati illo, officia, eligendi
+            quo neque aliquid vitae quis aliquam dolores voluptas porro ullam facilis quidem nisi sunt consequuntur
+            hic?
+            Aut est distinctio qui, officia illo odio quo fuga fugit quisquam adipisci recusandae nostrum laudantium
+            veritatis inventore totam dolores voluptas id cumque nulla dolor corporis vel magni quaerat voluptate.
+            Eius!</p>
         </div>
       </div>
 
-      <div class="row">
-        <div class="left col">
-          <div class="left">
-            <img class="logo" src="./assets/images/exp/fpoly.jpg" alt="" srcset="">
+      <div class="item">
+        <div class="title">
+          <div class="left col">
+            <div class="left">
+              <img class="logo" src="./assets/images/exp/fpoly.jpg">
+            </div>
+            <div class="right">
+              <div class="top">
+                Davlands
+                <span class="icon-wrap">
+                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                    class="text-black inline transform transition-transform duration-200" height="18" width="18"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill="none" d="M0 0h24v24H0V0z"></path>
+                    <path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"></path>
+                  </svg>
+                </span>
+
+              </div>
+              <div class="bot">
+                Fullstack developer
+              </div>
+            </div>
           </div>
           <div class="right">
-            <div class="top">
-              Factory software FPL Can Tho
-            </div>
-            <div class="bot">
-              Leader Developer team
-            </div>
+            2021–2023
           </div>
         </div>
-        <div class="right">
-          2021–2023
+        <div class="details">
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga labore obcaecati illo, officia, eligendi
+            quo neque aliquid vitae quis aliquam dolores voluptas porro ullam facilis quidem nisi sunt consequuntur
+            hic?
+            Aut est distinctio qui, officia illo odio quo fuga fugit quisquam adipisci recusandae nostrum laudantium
+            veritatis inventore totam dolores voluptas id cumque nulla dolor corporis vel magni quaerat voluptate.
+            Eius!</p>
         </div>
       </div>
 
-      <!-- <div class="row">
-        <div class="left">
-          Front-End Angular developer at FPT Polytechnic
-        </div>
-        <div class="right">
-          2023–now
-        </div>
-      </div> -->
 
-      <!-- <div class="row">
-        <div class="left">
-          Machine Learning Engineer Intern, Kuaishou, Beijing, China
-        </div>
-        <div class="right">
-          2021–2022
-        </div>
-      </div> -->
+
+      <footer>
+        © Davis 2023 · A FrogDev at @ <a href="http://devlands.io.vn" target="_blank"
+          rel="noopener noreferrer">Devlands</a>
+      </footer>
     </div>
 
-    <footer>
-      © Davis 2023 · A FrogDev at @FrogSageLand
-    </footer>
-  </div>
 
+    <script>
+      document.querySelectorAll('.item').forEach(item => {
+        const title = item.querySelector('.title');
+        const details = item.querySelector('.details');
+        const icon = item.querySelector('.icon-wrap svg');
 
-  <script>
-    const nav = document.getElementById("bottomNav");
-    const items = nav.querySelectorAll(".nav-item a");
-
-    items.forEach((item) => {
-      item.addEventListener("mouseenter", () => {
-        item.classList.add("hovered");
+        title.addEventListener('click', () => {
+          icon.classList.toggle('rotate');
+          details.classList.toggle('show');
+        });
       });
 
-      item.addEventListener("mouseleave", () => {
-        item.classList.remove("hovered");
+    </script>
+
+    <script>
+      document.querySelectorAll('.experience .item').forEach(item => {
+        const title = item.querySelector('.title');
+        const details = item.querySelector('.details');
+        const icon = item.querySelector('svg');
+
+        title.addEventListener('click', () => {
+          details.classList.toggle('show');
+          icon.classList.toggle('rotate');
+        });
       });
-    });
-  </script>
+    </script>
+
 </body>
 
 </html>
