@@ -165,7 +165,7 @@ body {
 }
 
 .container .head {
-  /* display: flex; */
+  display: flex;
   justify-content: space-between;
 }
 
@@ -267,7 +267,7 @@ body {
 .miscellaneous,
 .about,
 .projects {
-  padding-bottom: 90px;
+  padding-bottom: 50px;
 }
 
 .projects .right a p {
@@ -298,7 +298,7 @@ font-family: 'Ubuntu', sans-serif; */
 .education h1,
 .publications h1,
 .miscellaneous h1,
-.experience {
+.section {
   /* font-family: 'Rubik', sans-serif;
 font-family: 'Ubuntu', sans-serif; */
   font-weight: 550;
@@ -308,56 +308,56 @@ font-family: 'Ubuntu', sans-serif; */
   font-size: 31.5px;
 }
 
-/* Experience */
-/* ========== EXPERIENCE ========== */
+/* section */
+/* ========== section ========== */
 
-.experience .item {
+.section .item {
   display: block;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
   align-items: flex-start;
 }
 
-.experience .item .title {
+.section .item .title {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: solid 0.5px rgba(203, 203, 203, 0.511);
+  /* border-top: solid 0.5px rgba(203, 203, 203, 0.511); */
   padding: 10px 0px;
   cursor: pointer;
 }
 
 /* SVG mặc định ẩn */
-.experience .item .title .icon-wrap svg {
+.section .item .title .icon-wrap svg {
   opacity: 0;
   transform: rotate(0deg);
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 /* Hover .title → chỉ icon bên trong hiện */
-.experience .item .title:hover .icon-wrap svg {
+.section .item .title:hover .icon-wrap svg {
   opacity: 1;
 }
 
 /* Khi click: thêm class "rotate" để xoay icon */
-.experience .item .title .icon-wrap svg.rotate {
+.section .item .title .icon-wrap svg.rotate {
   transform: rotate(90deg);
 }
 
 /* Nội dung chi tiết ẩn mặc định */
-.experience .item .details {
+.section .item .details {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.4s ease;
 }
 
 /* Khi mở ra */
-.experience .item .details.show {
+.section .item .details.show {
   max-height: 500px;
   /* hoặc bao nhiêu tùy nội dung */
 }
 
 /* Nội dung đoạn văn */
-.experience .item .details p {
+.section .item .details p {
   margin: 0;
   margin-top: 0px;
   padding-left: 70px;
@@ -400,6 +400,7 @@ footer {
   margin: 18px 0px;
   font-weight: 400;
   margin-top: 50px;
+  margin-bottom: 100px;
 }
 
 .dark-mode footer {
@@ -580,9 +581,9 @@ h3 {
   }
 
   /* 
-  .experience .left, */
+  .section .left, */
   .education .left {
-    width: 70%;
+    /* width: 70%; */
   }
 
   .box {
@@ -657,23 +658,28 @@ h3 {
 }
 
 .appearance,
-.experience {
-  margin-bottom: 100px;
+.section {
+  margin-bottom: 50px;
 }
 
-.experience .item {
-  margin-bottom: 30px;
+.section .item {
   align-items: flex-start;
 }
 
-.experience .col {
+.section .col {
   display: flex;
 }
 
-.experience .col .left .logo {
+.section .col .left .logo {
   max-width: 50px;
   margin-right: 20px;
   border-radius: 50%;
+  border: solid 1px rgb(207, 207, 207);
+
+  border-color: #e5e5e5;
+  border-radius: 9999px;
+  border-style: solid;
+  border-width: 1.81132px;
 }
 
 .appearance .right {
@@ -688,7 +694,7 @@ h3 {
   color: var(--text-color-dark);
 }
 
-.experience .bot {
+.section .bot {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 15px;
   letter-spacing: 0.3px;

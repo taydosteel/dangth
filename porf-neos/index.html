@@ -28,9 +28,9 @@
       <div class="bottom-nav" id="bottomNav">
 
         <!-- 👤 Cá nhân -->
-        <div class="nav-item"><a href="#"><i class="fas fa-home"></i></a></div>
-        <div class="nav-item"><a href="#"><i class="fas fa-user"></i></a></div>
-        <div class="nav-item"><a href="#"><i class="fas fa-briefcase"></i></a></div>
+        <div class="nav-item"><a href="#"><i class="fa fa-user"></i></a></div>
+        <div class="nav-item"><a href="#"><i class="fa-solid fa-file-code"></i></a></div>
+        <div class="nav-item"><a href="#"><i class="fa-solid fa-certificate"></i></a></div>
         <div class="nav-item"><a href="#"><i class="fas fa-envelope"></i></a></div>
         <div class="ae ao dt du dc "></div>
         <!-- 🌐 Social Dev -->
@@ -118,7 +118,7 @@
         interesting knowledge ^^</p>
     </div>
 
-    <div class="experience title">
+    <div class="experience title section">
       <h1>Experience</h1>
       <div class="item">
         <div class="title">
@@ -196,31 +196,100 @@
         </div>
       </div>
 
-
-
-      <footer>
-        © Davis 2023 · A FrogDev at @ <a href="http://devlands.io.vn" target="_blank"
-          rel="noopener noreferrer">Devlands</a>
-      </footer>
     </div>
 
+    <div class="education title section">
+      <h1>Education</h1>
+      <div class="item">
+        <div class="title">
+          <div class="left col">
+            <div class="left">
+              <img class="logo" src="./assets/images/education/ctu.png">
+            </div>
+            <div class="right">
+              <div class="top">
+                Davlands
+                <span class="icon-wrap">
+                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                    class="text-black inline transform transition-transform duration-200" height="18" width="18"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill="none" d="M0 0h24v24H0V0z"></path>
+                    <path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"></path>
+                  </svg>
+                </span>
+
+              </div>
+              <div class="bot">
+                Information Technology
+              </div>
+            </div>
+          </div>
+          <div class="right">
+            Sep 2021 – Jan 2024
+          </div>
+        </div>
+        <div class="details">
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga labore obcaecati illo, officia, eligendi
+            quo neque aliquid vitae quis aliquam dolores voluptas porro ullam facilis quidem nisi sunt consequuntur
+            hic?
+            Aut est distinctio qui, officia illo odio quo fuga fugit quisquam adipisci recusandae nostrum laudantium
+            veritatis inventore totam dolores voluptas id cumque nulla dolor corporis vel magni quaerat voluptate.
+            Eius!</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="title">
+          <div class="left col">
+            <div class="left">
+              <img class="logo" src="./assets/images/exp/fpoly.jpg">
+            </div>
+            <div class="right">
+              <div class="top">
+                Davlands
+                <span class="icon-wrap">
+                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                    class="text-black inline transform transition-transform duration-200" height="18" width="18"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill="none" d="M0 0h24v24H0V0z"></path>
+                    <path d="M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"></path>
+                  </svg>
+                </span>
+
+              </div>
+              <div class="bot">
+                Software development
+              </div>
+            </div>
+          </div>
+          <div class="right">
+            Sep 2021 – Jan 2024
+          </div>
+        </div>
+        <div class="details">
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga labore obcaecati illo, officia, eligendi
+            quo neque aliquid vitae quis aliquam dolores voluptas porro ullam facilis quidem nisi sunt consequuntur
+            hic?
+            Aut est distinctio qui, officia illo odio quo fuga fugit quisquam adipisci recusandae nostrum laudantium
+            veritatis inventore totam dolores voluptas id cumque nulla dolor corporis vel magni quaerat voluptate.
+            Eius!</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="skill title section">
+      <h1>Skills</h1>
+
+    </div>
+
+    <footer>
+      © Davis 2023 · A FrogDev at @ <a href="http://devlands.io.vn" target="_blank"
+        rel="noopener noreferrer">Devlands</a>
+    </footer>
+
 
     <script>
-      document.querySelectorAll('.item').forEach(item => {
-        const title = item.querySelector('.title');
-        const details = item.querySelector('.details');
-        const icon = item.querySelector('.icon-wrap svg');
-
-        title.addEventListener('click', () => {
-          icon.classList.toggle('rotate');
-          details.classList.toggle('show');
-        });
-      });
-
-    </script>
-
-    <script>
-      document.querySelectorAll('.experience .item').forEach(item => {
+      document.querySelectorAll('.section .item').forEach(item => {
         const title = item.querySelector('.title');
         const details = item.querySelector('.details');
         const icon = item.querySelector('svg');
@@ -228,6 +297,19 @@
         title.addEventListener('click', () => {
           details.classList.toggle('show');
           icon.classList.toggle('rotate');
+        });
+      });
+
+      const nav = document.getElementById("bottomNav");
+      const items = nav.querySelectorAll(".nav-item a");
+
+      items.forEach((item) => {
+        item.addEventListener("mouseenter", () => {
+          item.classList.add("hovered");
+        });
+
+        item.addEventListener("mouseleave", () => {
+          item.classList.remove("hovered");
         });
       });
     </script>
