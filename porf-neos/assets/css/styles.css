@@ -130,6 +130,11 @@ body {
   box-sizing: border-box;
 }
 
+.power-shell {
+  width: 15px;
+  color: #9a9a9a;
+}
+
 
 /*========= MAIN ===========*/
 .container {
@@ -555,6 +560,222 @@ h3 {
   height: auto;
 }
 
+/*=========== PROJECTS ============*/
+.project .container {
+  padding-bottom: 0px;
+}
+
+/* From Uiverse.io by Pradeepsaranbishnoi */
+.project .tabs {
+  display: flex;
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0 0 1px 0 rgba(24, 94, 224, 0.15), 0 6px 12px 0 rgba(24, 94, 224, 0.15);
+  padding: 0.75rem;
+  border-radius: 99px;
+}
+
+.project .tabs * {
+  z-index: 2;
+}
+
+.project .container input[type="radio"] {
+  display: none;
+}
+
+.project .tab {
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 50px;
+  font-size: 18px;
+  color: black;
+  font-weight: 500;
+  border-radius: 99px;
+  cursor: pointer;
+  transition: color 0.15s ease-in;
+}
+
+.project .notification {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: .8rem;
+  height: .8rem;
+  position: absolute;
+  top: 10px;
+  left: 30%;
+  font-size: 10px;
+  margin-left: 0.75rem;
+  border-radius: 50%;
+  margin: 0px;
+  background-color: #e6eef9;
+  transition: 0.15s ease-in;
+}
+
+.project .container input[type="radio"]:checked+label {
+  color: #185ee0;
+}
+
+.project .container input[type="radio"]:checked+label>.notification {
+  background-color: #185ee0;
+  color: #fff;
+  margin: 0px;
+}
+
+.project .container input[id="radio-1"]:checked~.glider {
+  transform: translateX(0);
+}
+
+.project .container input[id="radio-2"]:checked~.glider {
+  transform: translateX(100%);
+}
+
+.project .container input[id="radio-3"]:checked~.glider {
+  transform: translateX(200%);
+}
+
+.project .glider {
+  padding: 0px 20px;
+  position: absolute;
+  display: flex;
+  height: 30px;
+  width: 50px;
+  background-color: #e6eef9;
+  z-index: 1;
+  border-radius: 99px;
+  transition: 0.25s ease-out;
+}
+
+
+.project .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 20px 0px;
+}
+
+.project .card {
+  background-color: white;
+  width: 340px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.project .card:hover {
+  transform: translateY(-5px);
+}
+
+.project .card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  background: #ddd;
+}
+
+.project .card-content {
+  padding: 20px;
+}
+
+.project .card-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.project .card-year {
+  color: gray;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.project .card-description {
+  margin: 10px 0 15px;
+  font-size: 14px;
+  color: #333;
+}
+
+.project .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.project .tags span {
+  background-color: #e4e4e4;
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-size: 13px;
+}
+
+.project .buttons a {
+  display: inline-block;
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  padding: 8px 14px;
+  margin-right: 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  transition: background-color 0.2s ease;
+}
+
+.project .buttons a:hover {
+  background-color: #333;
+}
+
+/*======= CERTIFICATIONS =======*/
+.cert .cert-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  text-align: center;
+}
+
+.cert .cert {
+  width: 250px;
+}
+
+.cert .cert img {
+  width: 100px;
+  height: auto;
+}
+
+.cert .cert-title {
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cert .cert-org {
+  color: #555;
+  font-size: 14px;
+}
+
+.cert .cert-date {
+  color: #888;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+
+@media (max-width: 700px) {
+
+  .project .tabs {
+    transform: scale(0.6);
+  }
+}
+
 
 /* Mobile */
 /* @media (max-width: 46.1875em) { */
@@ -584,6 +805,10 @@ h3 {
   .section .left, */
   .education .left {
     /* width: 70%; */
+  }
+
+  .container .education .item .title .right.times {
+    width: 25%;
   }
 
   .box {
