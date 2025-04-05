@@ -1,69 +1,43 @@
-function changeMode() {
-	var element = document.body;
-	element.classList.toggle("dark-mode");
+function toggleDarkMode() {
+  document.body.classList.toggle("dark-mode");
+  setMode();
 }
 
-function darkModeEffect() {
-	var element = document.body;
-	element.classList.toggle("dark-mode");
-}
+function changesIcon(iconElement) {
+  toggleDarkMode();
 
-function changesIcon(x) {
-	darkModeEffect();
-	x.classList.toggle("bx-sun");
-	setMode();
+  if (iconElement) {
+    iconElement.classList.toggle("fa-sun");
+    iconElement.classList.toggle("fa-moon");
+  }
 }
 
 function setMode() {
-	let darkMode = document.getElementsByClassName("dark-mode");
-	// 
-	if (darkMode.length == 0) {
-		// alert("dark mode -> light mode")
-		localStorage.setItem("modeByThean", "light")
-	} else {
-		// alert("light mode -> dark mode")
-		localStorage.setItem("modeByThean", "dark")
-	}
+  const isDark = document.body.classList.contains("dark-mode");
+  localStorage.setItem("davi-mode", isDark ? "dark" : "light");
 }
 
-window.onload = function () {
-	let mode = localStorage.getItem("modeByThean");
-	if (mode == "dark") {
-		let darkMode = document.getElementsByClassName("dark-mode");
+function applySavedMode() {
+  const mode = localStorage.getItem("davi-mode");
+  const icons = document.getElementsByClassName("sun-moon");
 
-		// 
-		if (darkMode.length == 0) {
-			// alert("dark mode -> light mode")
-			darkModeEffect();
+  if (mode === "dark") {
+    document.body.classList.add("dark-mode");
 
-			//thay đổi icon
-			let icon = document.getElementsByClassName("sun-moon");
-			console.log(icon);
-			icon[0].classList.toggle("bx-sun");
-			icon[1].classList.toggle("bx-sun");
-		} else {
-			changeMode();
-		}
-	}
+    // Đổi icon thành moon
+    for (let i = 0; i < icons.length; i++) {
+      icons[i].classList.remove("fa-sun");
+      icons[i].classList.add("fa-moon");
+    }
+  } else {
+    document.body.classList.remove("dark-mode");
+
+    // Đổi icon thành sun
+    for (let i = 0; i < icons.length; i++) {
+      icons[i].classList.remove("fa-moon");
+      icons[i].classList.add("fa-sun");
+    }
+  }
 }
 
-function loadMode() {
-	let mode = localStorage.getItem("modeByThean");
-	if (mode == "dark") {
-		let darkMode = document.getElementsByClassName("dark-mode");
-
-		// 
-		if (darkMode.length == 0) {
-			// alert("dark mode -> light mode")
-			darkModeEffect();
-
-			//thay đổi icon
-			let icon = document.getElementsByClassName("sun-moon");
-			console.log(icon);
-			icon[0].classList.toggle("bx-sun");
-			icon[1].classList.toggle("bx-sun");
-		} else {
-			changeMode();
-		}
-	}
-}
+window.onload = applySavedMode;
