@@ -71,6 +71,26 @@ body {
   overflow: visible;
 }
 
+.nav-item span {
+  position: absolute;
+  /* transition: margin-top 0.5s; */
+  display: none;
+  padding: 2px;
+  font-size: 15px;
+  color: #5c5c5c;
+}
+
+.nav-item:hover span {
+  display: block;
+  /* transform: scaleY(5.5); */
+  margin-top: -120px;
+  background-color: #F0F0F0;
+  border-radius: 5px;
+  width: 60px;
+  text-align: center;
+  border: solid 1px #8b8b8b;
+}
+
 .nav-item a {
   display: flex;
   align-items: center;
