@@ -1,5 +1,5 @@
 'use client';
-
+import Image from "next/image";
 import React from 'react';
 
 export default function Home() {
@@ -71,7 +71,7 @@ export default function Home() {
 
       {/* About */}
       <div className="about item">
-        <p>Hi, I'm Tran Huu Dang. You can call me Davis.</p>
+        <p>Hi, I&apos;m Tran Huu Dang. You can call me Davis.</p>
         <p>
           I like technology and other work with computers. I am a developer in the back-end website fields
           (NodeJS and Spring Boot)
@@ -86,7 +86,7 @@ export default function Home() {
 
       {/* ABOUT section */}
       <div className="about item">
-        <p>Hi, I'm Tran Huu Dang. You can call me Davis.</p>
+        <p>Hi, I&apos;m Tran Huu Dang. You can call me Davis.</p>
         <p>
           I like technology and other work with computers. I am a developer in the back-end website fields (NodeJS and Spring Boot)
         </p>

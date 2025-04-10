@@ -4,6 +4,7 @@ import '../styles/animation.css'
 import { ReactNode } from 'react'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import Live2DWidget from '@/components/Live2DWidget'
 
 export const metadata = {
   title: 'Tran Huu Dang',
@@ -27,18 +28,14 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           rel="stylesheet"
           href="https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css"
         />
-
-        {/* Font Awesome CDN */}
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-        />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
       </head>
       <body>
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <Live2DWidget />
       </body>
     </html>
   )
