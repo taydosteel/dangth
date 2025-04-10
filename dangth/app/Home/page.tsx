@@ -101,7 +101,7 @@ export default function Home() {
       {/* EXPERIENCE section */}
       <div className="experience title section">
         <h1>Experience</h1>
-        {[1, 2].map((_, idx) => (
+        {[1, 4].map((_, idx) => (
           <div className="item" key={idx}>
             <div className="title">
               <div className="left col">
@@ -187,6 +187,7 @@ export default function Home() {
       {/* PROJECTS section */}
       <div className="project title section">
         <h1>Projects</h1>
+
         <div className="head">
           <div className="container">
             <div className="tabs">
@@ -204,35 +205,38 @@ export default function Home() {
         </div>
 
         <div className="body">
-          {[1, 4].map((_, idx) => (
-            <div className="row" key={idx}>
-              <div className="card">
-                <img
-                  src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
-                  alt="Project image"
-                  className="card-img"
-                />
-                <div className="card-content">
-                  <h2 className="card-title">Todowy</h2>
-                  <p className="card-year">2024 – 2025</p>
-                  <p className="card-description">
-                    Designed and developed a custom to-do list website that helps organize tasks, set priorities, and boost productivity.
-                  </p>
-                  <div className="tags">
-                    <span>React</span>
-                    <span>TypeScript</span>
-                    <span>Tailwind</span>
-                  </div>
-                  <div className="buttons">
-                    <a href="#">🌐 Website</a>
-                    <a href="#">🔗 Source</a>
+          {[0, 1].map((rowIdx) => (
+            <div className="row" key={rowIdx}>
+              {[0, 1].map((colIdx) => (
+                <div className="card" key={colIdx}>
+                  <img
+                    src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
+                    alt="Project image"
+                    className="card-img"
+                  />
+                  <div className="card-content">
+                    <h2 className="card-title">Todowy</h2>
+                    <p className="card-year">2024 – 2025</p>
+                    <p className="card-description">
+                      Designed and developed a custom to-do list website that helps organize tasks, set priorities, and boost productivity.
+                    </p>
+                    <div className="tags">
+                      <span>React</span>
+                      <span>TypeScript</span>
+                      <span>Tailwind</span>
+                    </div>
+                    <div className="buttons">
+                      <a href="#">🌐 Website</a>
+                      <a href="#">🔗 Source</a>
+                    </div>
                   </div>
                 </div>
-              </div>
+              ))}
             </div>
           ))}
         </div>
       </div>
+
 
       {/* CERTIFICATIONS section */}
       <div className="cert title section">
