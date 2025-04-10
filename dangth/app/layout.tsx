@@ -34,8 +34,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
         />
 
-        <script src="../public/assets/js/main.js"></script>
-        <script src="../public/assets/js/mode.js"></script>
       </head>
       <body>
         <Navbar />

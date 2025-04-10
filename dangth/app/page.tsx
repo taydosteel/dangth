@@ -1,9 +1,10 @@
 import Image from "next/image";
+import Home from "./Home/page"
 
 export default function Root() {
   return (
     <div>
-      Hello world
+      <Home />
     </div>
   );
 }
